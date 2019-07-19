@@ -10,7 +10,7 @@
         9. Add your data provider to any test you wish.
 
         1) You can write your tests for any web site or for your project.
-        2) You can use dataProvider to generate login information.*/
+        2) You can use dataProvider to generate login information. */
 package pages;
 
 import org.openqa.selenium.*;
