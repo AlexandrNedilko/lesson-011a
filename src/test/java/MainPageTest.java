@@ -1,6 +1,3 @@
-
-
-
 import basepackage.BaseTest;
 
 import org.testng.annotations.*;
@@ -12,7 +9,7 @@ public class MainPageTest extends BaseTest {
     private MainPage mainPage;
     @DataProvider(name = "goods")
     public Object[] getGoods() {
-        String [] goods = new String[]{"Blouse", "Mouse"};
+        String [] goods = new String[]{"Blouse", "T-shirts", "Prom"};
         return goods;
     }
 
@@ -42,17 +39,16 @@ public class MainPageTest extends BaseTest {
         mainPage = new MainPage(driver);
     }
 
-
-    @Test(dataProvider = "goods")
+    @Test
     public void myFirstPattern(String good) {
 
 
         mainPage.enterSomeBody_andClick(good);
 
         Assert.assertEquals("1", "1");
-      /*  mainPage.addCartClick(); //Add to cart
+        mainPage.addCartClick(); //Add to cart
         mainPage.proceedtoCheckoutClick(); //Proceed to checkout
-        mainPage.plusClick(); //click Plus*/
+        mainPage.plusClick(); //click Plus
 
 
 
@@ -73,6 +69,27 @@ public class MainPageTest extends BaseTest {
         List <String> actual = new ArrayList<String>();
         actual= (mainPage.getAllTotals(actual));
         Assert.assertEquals(expected, actual);*/
+    }
+
+    @Test(dataProvider = "goods")
+    public void myTestDataProvider(String good) {
+        mainPage.enterSomeBody(good);
+        mainPage.clear();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void _4Test(){
+        System.out.println("_4Test");
+        Assert.assertEquals(7,7);
+    }
+    @Test
+    public void _5Test(){
+        System.out.println("_5Test");
+        Assert.assertEquals(5,5);
     }
 }
 

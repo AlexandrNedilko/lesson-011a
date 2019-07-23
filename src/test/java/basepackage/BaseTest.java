@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeTest
     public void setup(){
-        System.out.println(config.getProperty("chromedriver"));
+        //System.out.println(config.getProperty("chromedriver"));
         System.setProperty("webdriver.chrome.driver", config.getProperty("chromedriver"));
 
         driver = new ChromeDriver();

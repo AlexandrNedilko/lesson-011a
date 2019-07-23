@@ -3,24 +3,25 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:\Java Developer\lesson-011a\src">
         <classes>
-            <!-- <class name="folder.Annotation">
-                 <methods>
-                    &lt;!&ndash; <include name="test1"/>
-                     <include name="test2"/>&ndash;&gt;
-                 </methods>
-             </class>-->
-            <!--<class name="folder.Regresion">-->
-            <!--<methods>-->
-            <!--<include name="trueRegressionTest"/>-->
-            <!--<include name="falseRegressionTest"/>-->
-            <!--</methods>-->
-            <!--</class>-->
             <class name="ngtestxml.NgXmlTest">
                 <methods>
                     <include name="myFirstPattern"/>
+                    <include name="secondTest"/>
+                    <include name="thirdTest"/>
                 </methods>
             </class>
         </classes>
     </test>
+    <test name="test2">
+        <classes>
+                <class name="MainPageTest">
+                    <methods>
+                        <include name="_4Test"/>
+                        <include name="_5Test"/>
+                    </methods>
+                </class>
 
+
+        </classes>
+    </test>
 </suite>

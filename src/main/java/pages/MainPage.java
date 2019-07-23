@@ -251,5 +251,13 @@ public class MainPage {
         return webElement.getText();
     }
 
+    public void enterSomeBody(String good) {
+        formSearch.sendKeys(good);
+        search.click();
+    }
+
+    public void clear() {
+        formSearch.clear();
+    }
 }
 
